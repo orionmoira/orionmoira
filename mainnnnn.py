@@ -10,7 +10,7 @@ def Anamenu() :
   print("║  3-SAYI SAYDIRMA    ║")
   print("║  4-YAZI TURA        ║")
   print("║  5-SATIR DİZME      ║")
-  print("║  6-DİZİLER          ║")
+  print("║  6-NOT HESAPLAMA    ║")
   print("║  7-WHİLE            ║")
   print("║  8-YILAN OYUNU      ║"),
   print("║  9-HARF BULMA       ║")
