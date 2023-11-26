@@ -1,0 +1,92 @@
+import random
+import hesapmakinesi
+
+def Anamenu() :
+  print("╔═════════════════════╗")
+  print("║\033[1;31;40m PYTHON ÇALIŞMASI  \033[1;32;40m  ║")
+  print("║                     ║")
+  print("║  1-HESAP MAKİNESİ   ║")
+  print("║  2-SAYI TAHMİN      ║")
+  print("║  3-SAYI SAYDIRMA    ║")
+  print("║  4-YAZI TURA        ║")
+  print("║  5-SATIR DİZME      ║")
+  print("║  6-DİZİLER          ║")
+  print("║  7-WHİLE            ║")
+  print("║  8-YILAN OYUNU      ║"),
+  print("║  9-HARF BULMA       ║")
+  print("║  10-ÇIKIŞ (cr7)     ║")
+  print("║    Seçimiz nedir?   ║")
+  print("╚═════════════════════╝")
+  
+
+Anamenu()
+secim = input()
+if secim == "1" :  
+  hesapmakinesi1.menu()
+  exit() 
+if secim == "5" or secim == "cr7" or secim == "CR7" : print("Çıkış yapılıyor.")
+  
+from random import randint
+
+kolaySeviyeHak = 10
+zorSeviyeHak = 5
+
+
+# zorluk seviyesi yaz
+def zorluk_seviyesi():
+    seviye_tercihi = input("Oyun zorluğunu seçiniz. 'Kolay','Zor'\n").lower()
+    if seviye_tercihi == "kolay":
+        print("Oyunu kazanabilmek için 10 hakkın var!")
+        return kolaySeviyeHak
+    else:
+        print("Oyunu kazanabilmek için 5 hakkın var!")
+        return zorSeviyeHak
+
+
+def tahmin_oyunu():
+    print("Bilgisayar 1 ile 100 arasında bir sayıyı aklından tuttu.")
+    bilgisayar_tuttu = randint(1, 100)
+    devam_et = True
+    kalan_hak = zorluk_seviyesi()
+
+    while devam_et:
+        senin_tahminin = int(input("Bilgisayarın aklından tuttuğu sayı nedir?"))
+        if senin_tahminin > bilgisayar_tuttu:
+            print("Fazla attın, bir sonrakine küçük bir sayı seç!\n")
+            kalan_hak -= 1
+        elif senin_tahminin < bilgisayar_tuttu:
+            print("Ufak attın, bir dahakine büyük bir sayı seç!\n")
+            kalan_hak -= 1
+        else:
+            print("Tabrikler, kazandın!")
+            devam_et = False
+            yeni_oyun = input("Yeni bir oyun oynamaya ne dersin? 'Evet','Hayır'\n").lower()
+            if yeni_oyun == "evet":
+                tahmin_oyunu()
+            else:
+                devam_et = False
+
+        if kalan_hak == 0:
+            print("Hakkın bitti, oyunu kaybettin!")
+            devam_et = False
+            yeni_oyun = input("Yeni bir oyun oynamaya ne dersin? 'Evet','Hayır'\n").lower()
+            if yeni_oyun == "evet":
+                tahmin_oyunu()
+            else:
+                devam_et = False
+
+
+tahmin_oyunu()
+
+
+import random
+
+yazi_tura  = random.randint(1, 2)
+
+if yazi_tura == 1:
+  print("Yazı geldi...")
+else:
+  print("Tura geldi...")
+#import cr7_for.for01()
+menu()
+if secim == "3" :sayısaydırma.saydır()
