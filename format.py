@@ -1,3 +1,3 @@
 # format
-name = input("Enter your name:")
-print(f"Hello{name}!")
+name = input("Dünyanın en iyi futbolcusunu yaz:")
+print(f"GOAT {name}!")
