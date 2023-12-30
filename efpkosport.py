@@ -1,0 +1,21 @@
+from PyQt6.QtWidgets import *
+aa = QApplication([])
+
+def tiklama():
+    alert = QMessageBox()
+    alert.setText("Tikladın!")
+    alert.exec()
+
+pencere = QWidget()
+icerik = QVBoxLayout()
+
+icerik.addWidget(QPushButton("Dene"))
+buton1 = QPushButton("Tıkla")
+buton1.clicked.connect(tiklama)
+icerik.addWidget(buton1)
+
+icerik.addWidget(QLabel("Bilgi"))
+pencere.setLayout(icerik)
+
+pencere.show()
+aa.exec()
