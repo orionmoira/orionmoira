@@ -1,5 +1,9 @@
-Dosyaya kaydedilen veri.
-Ýkinci satýra geçtik!!
-Üçüncü satýr çalýþmaya devam--!!!
+asde
+wqerq
 
-
+ahmet
+ahmet |kaya|5892308932489234
+ahmet efe |kaya|324534324
+ahmet efe|kaya|241244213442
+ahmet efe|kaya|328489234
+{'ad': 'AHMET EFE', 'soyad': 'KAYA', 'numara': '233'}
